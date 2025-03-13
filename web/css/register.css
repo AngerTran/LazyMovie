@@ -3,22 +3,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url(../img/background.jpg);
+    background-image: url('image/2.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-}
-
-/* Thêm lớp phủ tối */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Lớp phủ tối (độ mờ 60%) */
-    z-index: -1; /* Để lớp phủ nằm dưới nội dung */
 }
 
 /* Container của form */
@@ -94,27 +82,29 @@ button[type="submit"]:hover {
 
 /* Logo LazyMoive */
 .logo-lazymoive {
-    text-align: start;
-    margin-top: 20px;
-    margin-left: 50px;
+    text-align: center;
+    margin-top: 3px;
+    border: 3px solid #fff;
+   
 }
 
 .logo-lazymoive img {
-    width: 150px;
+    width: 70px;
     border-radius: 50%;
-    border: 5px solid rgb(212, 28, 28);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
 }
 
-p a{
-    text-decoration: none;
+.logo-lazymoive h1 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-size: 28px;
+    margin-top: 10px;
 }
 
-p a:hover {
-    color: darkblue;
+/* Responsive cho thiết bị di động */
+@media (max-width: 480px) {
+    .form-container {
+        width: 90%;
+    }
 }
-
-p a:active {
-    color: red;
-}
-

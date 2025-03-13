@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Registration Form</title>
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
     <!-- Logo trên đầu form -->
     <div class="logo-lazymoive">
-        <img src="image/1.jpg" alt="Logo" width="100px">
-        
+        <img src="img/1.jpg" alt="Logo" width="100px"> 
+        <!-- SUA LAI LOGO DITCONME MAY -->
+        <!-- SUA LAI DATABASE PHU HOP VOI FONTEND -->
     </div>
 
     <div class="form-container">

@@ -1,6 +1,9 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
+<c:if test="${User == null }">
+    <c:redirect url="login.jsp" />
+    </c:if>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -64,10 +67,7 @@
                                 <td>Phương thức thanh toán</td>
                                 <td>Thẻ Visa</td>
                             </tr>
-                            <tr>
-                                <td>Lịch sử thanh toán</td>
-                                <td>01/03/2025 - Gia hạn gói cao cấp</td>
-                            </tr>
+                           
                         </table>
                     </div>
 

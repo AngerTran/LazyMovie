@@ -9,7 +9,7 @@ import web.utils.DBUtils;
 public class UserDAO {
     public UserDTO login(String fullName, String password) throws ClassNotFoundException {
         UserDTO user = null;
-        String sql = "SELECT UserID, FullName, Email, Role FROM [User] ";
+        String sql = "SELECT * FROM [User] ";
                 sql +=  "WHERE FullName = ? AND Password = ?";
 
         try (Connection con = DBUtils.getConnection();
