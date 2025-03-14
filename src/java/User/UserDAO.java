@@ -7,21 +7,22 @@ import java.sql.SQLException;
 import web.utils.DBUtils;
 
 public class UserDAO {
-    public UserDTO login(String fullName, String password) throws ClassNotFoundException {
+    public UserDTO login(String userName, String password) throws ClassNotFoundException {
         UserDTO user = null;
         String sql = "SELECT * FROM [User] ";
-                sql +=  "WHERE FullName = ? AND Password = ?";
+                sql +=  "WHERE UserName = ? AND Password = ?";
 
         try (Connection con = DBUtils.getConnection();
              PreparedStatement stmt = con.prepareStatement(sql)) {
 
-            stmt.setString(1, fullName);
+            stmt.setString(1, userName);
             stmt.setString(2, password);
 
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
                     user = new UserDTO();
                     user.setUserID(rs.getInt("UserID"));
+                    user.setUserName(userName);
                     user.setFullName(rs.getString("FullName"));
                     user.setEmail(rs.getString("Email"));
                     user.setRole(rs.getString("Role"));

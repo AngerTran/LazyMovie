@@ -14,6 +14,7 @@ import java.sql.Date;
 public class UserDTO {
     private int userID;
     private String fullName;
+    private String userName;
     private String email;
     private String phone;
     private String password;
@@ -22,6 +23,14 @@ public class UserDTO {
 
     public int getUserID() {
         return userID;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public void setUserID(int userID) {
